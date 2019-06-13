@@ -1,3 +1,11 @@
+# [0.0.5]
+## Changed
+- イベントをトリガーにステータスバーアイテムを更新するように変更
+
+# [0.0.4]
+## Fixed
+- Fix security alerts
+
 # [0.0.3]
 ## Added
 - Add github url

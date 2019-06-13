@@ -2,7 +2,7 @@
     "name": "toggleexplorerautoreveal",
     "displayName": "Toggle explorer.autoReveal",
     "description": "",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "takubt",
     "license": "MIT",
     "repository": {
