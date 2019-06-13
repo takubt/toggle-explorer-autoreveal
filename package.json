@@ -2,7 +2,7 @@
     "name": "toggleexplorerautoreveal",
     "displayName": "Toggle explorer.autoReveal",
     "description": "",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "takubt",
     "license": "MIT",
     "repository": {
@@ -19,36 +19,48 @@
     "categories": [
         "Other"
     ],
-    "keywords": ["toggle", "explorer", "autoreveal"],
+    "keywords": [
+        "toggle",
+        "explorer",
+        "autoreveal"
+    ],
     "activationEvents": [
         "*"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "toggleexplorerautoreveal.toggle",
-            "title": "autoReveal toggle"
-        }, {
-            "command": "toggleexplorerautoreveal.on",
-            "title": "autoReveal on"
-        }, {
-            "command": "toggleexplorerautoreveal.off",
-            "title": "autoReveal off"
-        }],
-        "menus": {
-            "explorer/context": [{
+        "commands": [
+            {
                 "command": "toggleexplorerautoreveal.toggle",
-                "title": "Toggle autoReveal",
-                "group": "toggleexplorerautoreveal"
-            }, {
+                "title": "autoReveal toggle"
+            },
+            {
                 "command": "toggleexplorerautoreveal.on",
-                "title": "autoReveal on",
-                "group": "toggleexplorerautoreveal"
-            }, {
+                "title": "autoReveal on"
+            },
+            {
                 "command": "toggleexplorerautoreveal.off",
-                "title": "autoReveal off",
-                "group": "toggleexplorerautoreveal"
-            }]
+                "title": "autoReveal off"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "toggleexplorerautoreveal.toggle",
+                    "title": "Toggle autoReveal",
+                    "group": "toggleexplorerautoreveal"
+                },
+                {
+                    "command": "toggleexplorerautoreveal.on",
+                    "title": "autoReveal on",
+                    "group": "toggleexplorerautoreveal"
+                },
+                {
+                    "command": "toggleexplorerautoreveal.off",
+                    "title": "autoReveal off",
+                    "group": "toggleexplorerautoreveal"
+                }
+            ]
         }
     },
     "scripts": {
@@ -59,10 +71,10 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.21",
-        "tslint": "^5.8.0",
+        "@types/mocha": "^2.2.42",
         "@types/node": "^8.10.25",
-        "@types/mocha": "^2.2.42"
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.34"
     }
 }
