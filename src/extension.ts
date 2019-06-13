@@ -4,7 +4,7 @@
 import * as vscode from 'vscode';
 
 let txarStatusBarItem: vscode.StatusBarItem;
-const NAMESPACE = 'toggleexplorerautoreveal';
+const NAMESPACE = 'toggle-explorer-autoreveal';
 const SETTING_KEY = 'explorer.autoReveal';
 const TOGGLE_COMMAND = `${NAMESPACE}.toggle`;
 const ON_COMMAND = `${NAMESPACE}.on`;
@@ -37,7 +37,14 @@ export function activate(context: vscode.ExtensionContext) {
     txarStatusBarItem.show();
     context.subscriptions.push(txarStatusBarItem);
 
+    vscode.workspace.onDidChangeConfiguration(e => {
+        if (e.affectsConfiguration(SETTING_KEY)) {
+            updateStatusBarItem();
+        }
+    });
     updateStatusBarItem();
+
+    log("activated");
 }
 
 // this method is called when your extension is deactivated
@@ -79,8 +86,8 @@ function turnOff(): void {
  * @param value
  */
 function update(value: boolean) {
-    vscode.workspace.getConfiguration().update(SETTING_KEY, value, vscode.ConfigurationTarget.Global).then(value => {
-        updateStatusBarItem();
+    vscode.workspace.getConfiguration().update(SETTING_KEY, value, vscode.ConfigurationTarget.Global).then(() => {
+        log(`update: ${value}`);
     }, reason => {
         error(reason);
     });
