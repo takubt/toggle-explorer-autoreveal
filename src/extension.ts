@@ -4,7 +4,7 @@
 import * as vscode from 'vscode';
 
 let txarStatusBarItem: vscode.StatusBarItem;
-const NAMESPACE = 'toggleexplorerautoreveal';
+const NAMESPACE = 'toggle-explorer-autoreveal';
 const SETTING_KEY = 'explorer.autoReveal';
 const TOGGLE_COMMAND = `${NAMESPACE}.toggle`;
 const ON_COMMAND = `${NAMESPACE}.on`;
