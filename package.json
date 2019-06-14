@@ -2,7 +2,7 @@
     "name": "toggleexplorerautoreveal",
     "displayName": "Toggle explorer.autoReveal",
     "description": "",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "takubt",
     "license": "MIT",
     "repository": {
@@ -31,34 +31,34 @@
     "contributes": {
         "commands": [
             {
-                "command": "toggleexplorerautoreveal.toggle",
+                "command": "toggle-explorer-autoreveal.toggle",
                 "title": "autoReveal toggle"
             },
             {
-                "command": "toggleexplorerautoreveal.on",
+                "command": "toggle-explorer-autoreveal.on",
                 "title": "autoReveal on"
             },
             {
-                "command": "toggleexplorerautoreveal.off",
+                "command": "toggle-explorer-autoreveal.off",
                 "title": "autoReveal off"
             }
         ],
         "menus": {
             "explorer/context": [
                 {
-                    "command": "toggleexplorerautoreveal.toggle",
+                    "command": "toggle-explorer-autoreveal.toggle",
                     "title": "Toggle autoReveal",
-                    "group": "toggleexplorerautoreveal"
+                    "group": "toggle-explorer-autoreveal"
                 },
                 {
-                    "command": "toggleexplorerautoreveal.on",
+                    "command": "toggle-explorer-autoreveal.on",
                     "title": "autoReveal on",
-                    "group": "toggleexplorerautoreveal"
+                    "group": "toggle-explorer-autoreveal"
                 },
                 {
-                    "command": "toggleexplorerautoreveal.off",
+                    "command": "toggle-explorer-autoreveal.off",
                     "title": "autoReveal off",
-                    "group": "toggleexplorerautoreveal"
+                    "group": "toggle-explorer-autoreveal"
                 }
             ]
         }
